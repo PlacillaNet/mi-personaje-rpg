@@ -34,6 +34,38 @@
                         <p>Recupera 30 puntos de vida. Consume 5 núcleos.</p>
                     </div>
                 </div>
+                <!-- Habilidad Castigo del Leviatán -->
+                <div class="ability" id="castigo-del-leviatan">
+                    <h4>Castigo del Leviatán</h4>
+                    <button id="launch-attack">Lanzar Ataque</button>
+
+                    <!-- Casillas para bonificadores -->
+                    <div>
+                        <label for="attack-bonus">Bonificador de Ataque: </label>
+                        <input type="number" id="attack-bonus" value="16" />
+                    </div>
+                    <div>
+                        <label for="damage-bonus">Bonificador de Daño: </label>
+                        <input type="number" id="damage-bonus" value="0" />
+                    </div>
+
+                    <!-- Botones para seleccionar núcleos -->
+                    <div id="core-selection" style="display: none;">
+                        <h4>Selecciona el número de núcleos a consumir:</h4>
+                        <button class="core-button" data-cores="1">1 Núcleo</button>
+                        <button class="core-button" data-cores="2">2 Núcleos</button>
+                        <button class="core-button" data-cores="3">3 Núcleos</button>
+                        <button class="core-button" data-cores="4">4 Núcleos</button>
+                        <button class="core-button" data-cores="5">5 Núcleos</button>
+                    </div>
+
+                    <!-- Resultado del ataque -->
+                    <div id="attack-result" style="display: none;">
+                        <h4>Resultado del Ataque</h4>
+                        <p id="attack-roll"></p>
+                        <p id="damage-roll"></p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -48,7 +80,7 @@
                     <button id="increment-turn">Siguiente Turno</button>
                 </div>
                 <div>
-                    <h3>Contador de Núcleos: <span id="nucleos-count">0</span></h3>
+                    <h3>Contador de Núcleos: <span id="nucleos-count">43</span></h3>
                     <button id="decrease-nucleos">-</button>
                     <button id="increase-nucleos">+</button>
                     <label for="max-nucleos">Núcleos Máximos:</label>

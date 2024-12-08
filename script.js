@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const applyDamageButton = document.getElementById("apply-damage");
     const applyHealingButton = document.getElementById("apply-healing");
 
+    // Elementos de la habilidad Castigo del Leviatán
+    const launchAttackBtn = document.getElementById("launch-attack");
+    const coreSelectionDiv = document.getElementById("core-selection");
+    const coreButtons = document.querySelectorAll(".core-button");
+    const attackResultDiv = document.getElementById("attack-result");
+    const attackRollText = document.getElementById("attack-roll");
+    const damageRollText = document.getElementById("damage-roll");
+    const attackBonusInput = document.getElementById("attack-bonus");
+    const damageBonusInput = document.getElementById("damage-bonus");
+
     let turns = 0;
     let nucleos = 0;
     let maxNucleos = 43;
@@ -119,5 +129,63 @@ document.addEventListener("DOMContentLoaded", function() {
             currentHealth = maxHealth; // Evitar que la vida exceda la máxima
         }
         currentHealthInput.value = currentHealth;
+    });
+
+    // Función para lanzar un dado de 20 caras
+    function rollAttack() {
+        return Math.floor(Math.random() * 20) + 1; // Dado de 20 caras
+    }
+
+    // Función para lanzar los dados de daño
+    function rollDamage(numCores) {
+        let damage = 0;
+
+        // Lanzar 5 dados de 12 caras
+        for (let i = 0; i < 5; i++) {
+            damage += Math.floor(Math.random() * 12) + 1;
+        }
+
+        // Lanzar 2 dados de 8 caras
+        for (let i = 0; i < 2; i++) {
+            damage += Math.floor(Math.random() * 8) + 1;
+        }
+
+        // Lanzar un dado de 8 caras extra por cada núcleo
+        for (let i = 0; i < numCores; i++) {
+            damage += Math.floor(Math.random() * 8) + 1;
+        }
+
+        return damage;
+    }
+
+    // Función para lanzar el ataque
+    launchAttackBtn.addEventListener("click", () => {
+        const attackBonus = parseInt(attackBonusInput.value);  // Bonificador de ataque
+        const damageBonus = parseInt(damageBonusInput.value);  // Bonificador de daño
+
+        const attackRoll = rollAttack() + attackBonus;  // Lanza el dado de ataque y añade el bonificador
+        let coresUsed = 0;
+
+        attackRollText.textContent = `Tirada de Ataque: ${attackRoll}`;
+        coreSelectionDiv.style.display = "block"; // Mostrar la selección de núcleos
+        attackResultDiv.style.display = "none";  // Esconder el resultado del ataque hasta que se haya elegido núcleos
+
+        // Evento para seleccionar el número de núcleos a consumir
+        coreButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+                const numCores = parseInt(event.target.getAttribute("data-cores"));
+                coresUsed = numCores;
+
+                // Actualizar el contador de núcleos
+                let nucleos = parseInt(nucleosCount.textContent);
+                nucleos -= coresUsed;  // Restar los núcleos consumidos
+                nucleosCount.textContent = nucleos;
+
+                // Calcular y mostrar el daño
+                const damageRoll = rollDamage(coresUsed) + damageBonus;  // Sumar el bonificador de daño
+                damageRollText.textContent = `Tirada de Daño: ${damageRoll}`;
+                attackResultDiv.style.display = "block";  // Mostrar el resultado del ataque
+            });
+        });
     });
 });
