@@ -8,83 +8,131 @@
 </head>
 <body>
     <div class="container">
-        <!-- Encabezado de la Información del Personaje -->
-        <div class="character-header">
+        <!-- Navegación de Pestañas -->
+        <div class="tabs">
+            <button class="tab-button active" id="descripcion-tab">Descripción</button>
+            <button class="tab-button" id="combate-tab">Combate</button>
+        </div>
+
+        <!-- Contenedor de Descripción (pestaña activa por defecto) -->
+        <div id="descripcion-container" class="tab-container">
             <h1>Arthur Pendragon</h1>
             <h2>Clase: Paladín</h2>
             <p>Nivel: 13</p>
             <p>Núcleos: 43 (energía divina y abisal)</p>
             <p>Arthur Pendragon, paladín del Leviatán, combate con una mezcla de poder divino y abisal, dominando habilidades ofensivas, defensivas y de curación.</p>
-        </div>
 
-        <!-- Sistema de Núcleos y Cargas de Concentración -->
-        <div class="core-system">
-            <h3>Sistema de Núcleos y Cargas de Concentración</h3>
-            <div class="core-info">
-                <h4>Núcleos</h4>
-                <p>Base: 30 + Nivel (43)</p>
-                <p>Regeneración: 1 núcleo por turno en combate y la mitad después de un descanso largo.</p>
-            </div>
-            <div class="concentration-charges">
-                <h4>Cargas de Concentración</h4>
-                <p>Se acumulan al mantener habilidades activas. Al desactivar, puedes usar la mitad de las cargas para obtener efectos adicionales.</p>
-                <p>Cargas permanentes: Se obtiene una carga extra cada dos turnos.</p>
-            </div>
-        </div>
-
-        <!-- Habilidades -->
-        <div class="abilities">
-            <h3>Habilidades</h3>
-
-            <!-- Ofensiva: Castigo del Leviatán -->
-            <div class="offensive">
-                <h4>Ofensiva: Castigo del Leviatán</h4>
-                <p>Daño básico: 5d12 + 2d8 (más 1d8 por cada núcleo invertido, máximo 5).</p>
-                <p>Efecto secundario: Marca abisal que causa 1d6+1 de daño por turno al enemigo.</p>
-                <p>Requiere: Impacto exitoso en combate.</p>
+            <div class="core-system">
+                <h3>Sistema de Núcleos y Cargas de Concentración</h3>
+                <div class="core-info">
+                    <h4>Núcleos</h4>
+                    <p>Base: 30 + Nivel (43)</p>
+                    <p>Regeneración: 1 núcleo por turno en combate y la mitad después de un descanso largo.</p>
+                </div>
+                <div class="concentration-charges">
+                    <h4>Cargas de Concentración</h4>
+                    <p>Se acumulan al mantener habilidades activas. Al desactivar, puedes usar la mitad de las cargas para obtener efectos adicionales.</p>
+                    <p>Cargas permanentes: Se obtiene una carga extra cada dos turnos.</p>
+                </div>
             </div>
 
-            <!-- Soporte: Cruzados de las Profundidades -->
-            <div class="support">
-                <h4>Soporte: Cruzados de las Profundidades</h4>
-                <p>Potencia las armas de los aliados convirtiendo su daño en daño de agua.</p>
-                <p>Requiere concentración y otorga +1 en competencia y ataque por objetivo.</p>
+            <div class="abilities">
+                <h3>Habilidades</h3>
+                <!-- Detalles de las habilidades (como en el código que has compartido) -->
+                <div class="offensive">
+                    <h4>Ofensiva: Castigo del Leviatán</h4>
+                    <p>Daño básico: 5d12 + 2d8 (más 1d8 por cada núcleo invertido, máximo 5).</p>
+                    <p>Efecto secundario: Marca abisal que causa 1d6+1 de daño por turno al enemigo.</p>
+                    <p>Requiere: Impacto exitoso en combate.</p>
+                </div>
+
+                <div class="support">
+                    <h4>Soporte: Cruzados de las Profundidades</h4>
+                    <p>Potencia las armas de los aliados convirtiendo su daño en daño de agua.</p>
+                    <p>Requiere concentración y otorga +1 en competencia y ataque por objetivo.</p>
+                </div>
+
+                <div class="defensive">
+                    <h4>Bastión Abisal (Defensivo)</h4>
+                    <p>Reduces la CA del enemigo y otorgas bonificaciones defensivas a tus aliados.</p>
+                    <p>Incremental por turnos: Aumenta la defensa, daño y hasta da puntos de golpe temporales.</p>
+                </div>
             </div>
 
-            <!-- Bastión Abisal (Defensivo) -->
-            <div class="defensive">
-                <h4>Bastión Abisal (Defensivo)</h4>
-                <p>Reduces la CA del enemigo y otorgas bonificaciones defensivas a tus aliados.</p>
-                <p>Incremental por turnos: Aumenta la defensa, daño y hasta da puntos de golpe temporales.</p>
-            </div>
-        </div>
+            <div class="special-abilities">
+                <h3>Habilidades Especiales</h3>
+                <div class="flame-expansion">
+                    <h4>Expansión Divina: Llama Eterna</h4>
+                    <p>Beneficios: Aumenta ataque, daño, velocidad, pero causa daño constante cada turno.</p>
+                    <p>Turno 1: +2 a competencia y +10 a velocidad.</p>
+                    <p>Turno 2: Resistencia a daños, +2 CA.</p>
+                    <p>Turno 3: Aumento ofensivo con +1d10 daño adicional.</p>
+                </div>
 
-        <!-- Habilidades Especiales -->
-        <div class="special-abilities">
-            <h3>Habilidades Especiales</h3>
-
-            <!-- Expansión Divina: Llama Eterna -->
-            <div class="flame-expansion">
-                <h4>Expansión Divina: Llama Eterna</h4>
-                <p>Beneficios: Aumenta ataque, daño, velocidad, pero causa daño constante cada turno.</p>
-                <p>Turno 1: +2 a competencia y +10 a velocidad.</p>
-                <p>Turno 2: Resistencia a daños, +2 CA.</p>
-                <p>Turno 3: Aumento ofensivo con +1d10 daño adicional.</p>
+                <div class="abyssal-seas">
+                    <h4>Expansión Divina: Los Mares Abisales</h4>
+                    <p>Ganas velocidad acuática y puedes invocar tentáculos que causan daño adicional.</p>
+                    <p>Turno 2: Ganas +1 a CA mientras los tentáculos estén activos.</p>
+                </div>
             </div>
 
-            <!-- Expansión Divina: Los Mares Abisales -->
-            <div class="abyssal-seas">
-                <h4>Expansión Divina: Los Mares Abisales</h4>
-                <p>Ganas velocidad acuática y puedes invocar tentáculos que causan daño adicional.</p>
-                <p>Turno 2: Ganas +1 a CA mientras los tentáculos estén activos.</p>
+            <div class="bio">
+                <h3>Biografía</h3>
+                <p>Arthur Pendragon, conocido como el paladín del Leviatán, lucha por el equilibrio entre el poder divino y abisal. Con su control sobre los mares y el Leviatán, Arthur busca restaurar el orden y la justicia en el mundo, mientras enfrenta los dilemas de la energía abisal que habita en su alma.</p>
             </div>
         </div>
 
-        <!-- Biografía del Personaje -->
-        <div class="bio">
-            <h3>Biografía</h3>
-            <p>Arthur Pendragon, conocido como el paladín del Leviatán, lucha por el equilibrio entre el poder divino y abisal. Con su control sobre los mares y el Leviatán, Arthur busca restaurar el orden y la justicia en el mundo, mientras enfrenta los dilemas de la energía abisal que habita en su alma.</p>
+        <!-- Contenedor de Combate -->
+        <div id="combate-container" class="tab-container">
+            <h2>Combate</h2>
+
+            <!-- Botón para Iniciar Combate -->
+            <button id="start-combat">Iniciar Combate</button>
+
+            <div id="combat-controls" style="display: none;">
+                <!-- Contador de Turnos -->
+                <div>
+                    <h3>Contador de Turnos: <span id="turns-count">0</span></h3>
+                    <button id="increment-turn">Siguiente Turno</button>
+                </div>
+
+                <!-- Contador de Núcleos -->
+                <div>
+                    <h3>Contador de Núcleos: <span id="nucleos-count">0</span></h3>
+                    <button id="decrease-nucleos">-</button>
+                    <button id="increase-nucleos">+</button>
+                    <label for="max-nucleos">Núcleos Máximos:</label>
+                    <input type="number" id="max-nucleos" value="43" />
+                </div>
+
+                <!-- Contador de Vida -->
+                <div>
+                    <h3>Vida Máxima:</h3>
+                    <input type="number" id="max-health" placeholder="Introduce vida máxima" />
+                </div>
+
+                <div>
+                    <h3>Vida Actual:</h3>
+                    <input type="number" id="current-health" value="100" disabled />
+                </div>
+
+                <!-- Daño Recibido -->
+                <div>
+                    <h3>Daño Recibido:</h3>
+                    <input type="number" id="damage-input" value="0" />
+                    <button id="apply-damage">Aplicar Daño</button>
+                </div>
+
+                <!-- Curaciones -->
+                <div>
+                    <h3>Curación:</h3>
+                    <input type="number" id="healing-input" value="0" />
+                    <button id="apply-healing">Aplicar Curación</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
