@@ -3,22 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Personaje RPG</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Arthur Pendragon - Paladín del Leviatán</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Mi Personaje RPG</h1>
-    </header>
+    <div class="container">
+        <!-- Encabezado de la Información del Personaje -->
+        <div class="character-header">
+            <h1>Arthur Pendragon</h1>
+            <h2>Clase: Paladín</h2>
+            <p>Nivel: 13</p>
+            <p>Núcleos: 43 (energía divina y abisal)</p>
+            <p>Arthur Pendragon, paladín del Leviatán, combate con una mezcla de poder divino y abisal, dominando habilidades ofensivas, defensivas y de curación.</p>
+        </div>
 
-    <main>
-        <p>Aquí podrás ver las estadísticas y habilidades de tu personaje.</p>
-    </main>
+        <!-- Sistema de Núcleos y Cargas de Concentración -->
+        <div class="core-system">
+            <h3>Sistema de Núcleos y Cargas de Concentración</h3>
+            <div class="core-info">
+                <h4>Núcleos</h4>
+                <p>Base: 30 + Nivel (43)</p>
+                <p>Regeneración: 1 núcleo por turno en combate y la mitad después de un descanso largo.</p>
+            </div>
+            <div class="concentration-charges">
+                <h4>Cargas de Concentración</h4>
+                <p>Se acumulan al mantener habilidades activas. Al desactivar, puedes usar la mitad de las cargas para obtener efectos adicionales.</p>
+                <p>Cargas permanentes: Se obtiene una carga extra cada dos turnos.</p>
+            </div>
+        </div>
 
-    <footer>
-        <p>Desarrollado por PlacillaNet</p>
-    </footer>
+        <!-- Habilidades -->
+        <div class="abilities">
+            <h3>Habilidades</h3>
 
-    <script src="script.js"></script>
+            <!-- Ofensiva: Castigo del Leviatán -->
+            <div class="offensive">
+                <h4>Ofensiva: Castigo del Leviatán</h4>
+                <p>Daño básico: 5d12 + 2d8 (más 1d8 por cada núcleo invertido, máximo 5).</p>
+                <p>Efecto secundario: Marca abisal que causa 1d6+1 de daño por turno al enemigo.</p>
+                <p>Requiere: Impacto exitoso en combate.</p>
+            </div>
+
+            <!-- Soporte: Cruzados de las Profundidades -->
+            <div class="support">
+                <h4>Soporte: Cruzados de las Profundidades</h4>
+                <p>Potencia las armas de los aliados convirtiendo su daño en daño de agua.</p>
+                <p>Requiere concentración y otorga +1 en competencia y ataque por objetivo.</p>
+            </div>
+
+            <!-- Bastión Abisal (Defensivo) -->
+            <div class="defensive">
+                <h4>Bastión Abisal (Defensivo)</h4>
+                <p>Reduces la CA del enemigo y otorgas bonificaciones defensivas a tus aliados.</p>
+                <p>Incremental por turnos: Aumenta la defensa, daño y hasta da puntos de golpe temporales.</p>
+            </div>
+        </div>
+
+        <!-- Habilidades Especiales -->
+        <div class="special-abilities">
+            <h3>Habilidades Especiales</h3>
+
+            <!-- Expansión Divina: Llama Eterna -->
+            <div class="flame-expansion">
+                <h4>Expansión Divina: Llama Eterna</h4>
+                <p>Beneficios: Aumenta ataque, daño, velocidad, pero causa daño constante cada turno.</p>
+                <p>Turno 1: +2 a competencia y +10 a velocidad.</p>
+                <p>Turno 2: Resistencia a daños, +2 CA.</p>
+                <p>Turno 3: Aumento ofensivo con +1d10 daño adicional.</p>
+            </div>
+
+            <!-- Expansión Divina: Los Mares Abisales -->
+            <div class="abyssal-seas">
+                <h4>Expansión Divina: Los Mares Abisales</h4>
+                <p>Ganas velocidad acuática y puedes invocar tentáculos que causan daño adicional.</p>
+                <p>Turno 2: Ganas +1 a CA mientras los tentáculos estén activos.</p>
+            </div>
+        </div>
+
+        <!-- Biografía del Personaje -->
+        <div class="bio">
+            <h3>Biografía</h3>
+            <p>Arthur Pendragon, conocido como el paladín del Leviatán, lucha por el equilibrio entre el poder divino y abisal. Con su control sobre los mares y el Leviatán, Arthur busca restaurar el orden y la justicia en el mundo, mientras enfrenta los dilemas de la energía abisal que habita en su alma.</p>
+        </div>
+    </div>
 </body>
 </html>
