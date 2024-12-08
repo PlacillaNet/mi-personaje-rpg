@@ -1,175 +1,79 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Encabezado de Información */
-.character-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-size: 36px;
-    color: #2a4d6f;
-}
-
-h2 {
-    font-size: 24px;
-    color: #5577a1;
-}
-
-h3 {
-    font-size: 28px;
-    color: #6a2e4e;
-    border-bottom: 2px solid #6a2e4e;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-h4 {
-    font-size: 20px;
-    color: #4f6f99;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Sección de Núcleos y Cargas */
-.core-system, .abilities, .special-abilities, .bio {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.core-info, .concentration-charges {
-    margin-bottom: 15px;
-}
-
-/* Sección de Habilidades */
-.abilities .offensive, .abilities .support, .abilities .defensive {
-    margin-bottom: 20px;
-}
-
-.abilities h4, .special-abilities h4 {
-    color: #4f6f99;
-}
-
-/* Biografía */
-.bio {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-/* Mejoras del Layout */
-.container {
-    padding: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1, h2, h3, h4 {
-        font-size: 18px;
-    }
-}
+/* Estilo básico */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  .tabs {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+}
+
+.tabs {
     display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
-  }
-  
-  .tab {
+}
+
+.tab {
     padding: 10px 20px;
     cursor: pointer;
     background-color: #ccc;
     border: none;
-    transition: background-color 0.3s;
-  }
-  
-  .tab:hover {
-    background-color: #999;
-  }
-  
-  .tab-content {
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: #bbb;
+}
+
+.tab-content {
     display: none;
-    padding: 20px;
-  }
-  
-  .tab-content.active {
+}
+
+.tab-content.active {
     display: block;
-  }
-  
-  #combat-controls {
-    margin-top: 20px;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  input {
-    padding: 5px;
-    width: 80px;
-  }
-  .combat-container {
-    margin-top: 20px;
+}
+
+button {
     padding: 10px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
-  
-  .combat-container div {
-    margin-bottom: 15px;
-  }
-  
-  .combat-container label {
-    font-weight: bold;
-  }
-  
-  .combat-container input {
-    padding: 5px;
-    margin-left: 10px;
-    width: 100px;
-  }
-  
-  .combat-container button {
-    padding: 5px 10px;
-    margin-left: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-  }
-  
-  #combat-status {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+input[type="number"] {
+    padding: 5px;
+    margin: 10px 0;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#combat-controls {
+    margin-top: 20px;
+}
+
+.abilities {
+    margin-top: 20px;
+}
+
+.ability {
+    margin-bottom: 10px;
+}
